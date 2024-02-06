@@ -1,0 +1,23 @@
+#######################################
+# Syntax Coloring Map For JMSSD1306_H
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+OLED	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+init_oled	KEYWORD2
+print		KEYWORD2
+clear		KEYWORD2
+display_info	KEYWORD2
+close		KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
