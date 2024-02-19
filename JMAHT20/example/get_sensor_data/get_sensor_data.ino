@@ -57,10 +57,11 @@ void aht20Task(void *pvParameter){
 
   vTaskDelay(100 / portTICK_PERIOD_MS);
   init_aht20(&aht20, AHT20_ADDRESS);
-
+  int index = 0;
   while(1){
 
-    snprintf(aht_buffer, sizeof(aht_buffer), " T: %2d H: %2d ", int(aht20.get_temperature(&aht20)), int(aht20.get_humidity(&aht20)));
+    index++;
+    snprintf(aht_buffer, sizeof(aht_buffer), " Timestamp :%5d T: %2d H: %2d ", index, int(aht20.get_temperature(&aht20)), int(aht20.get_humidity(&aht20)));
     printf("%s \n", aht_buffer);
     vTaskDelay(500 / portTICK_PERIOD_MS);
 
@@ -90,4 +91,3 @@ void setup() {
 void loop() {
   
 }
-
